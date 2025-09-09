@@ -55,7 +55,7 @@ function AppContent() {
   // Si está autenticado, mostrar la aplicación principal
   return (
     <AppProvider>
-      <div className="min-h-screen bg-gray-50 flex">
+      <div className="h-screen bg-gray-50 flex overflow-hidden">
         <Sidebar
           isOpen={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
@@ -63,14 +63,14 @@ function AppContent() {
           onSectionChange={handleSectionChange}
         />
         
-        <div className="flex-1 flex flex-col lg:ml-64"> {/* Añadido margen izquierdo para el sidebar */}
+        <div className="flex-1 flex flex-col lg:ml-100 h-screen"> {/* Añadido margen izquierdo para el sidebar */}
           <Header
             onToggleSidebar={() => setSidebarOpen(true)}
             user={user}
           />
           
-          <main className="flex-1 p-6 overflow-y-auto">
-            <div className="max-w-7xl mx-auto">
+          <main className="flex-1 p-6 overflow-y-auto bg-gray-50">
+            <div className="w-full">
               {activeSection === 'dashboard' && <Dashboard />}
               {activeSection === 'agenda' && <Agenda />}
               {activeSection === 'pedidos' && <Pedidos />}

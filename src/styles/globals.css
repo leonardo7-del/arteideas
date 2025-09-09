@@ -45,6 +45,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  zoom: 1 !important; /* Forzar 100% de zoom a nivel de documento */
 }
 
 body {

@@ -60,10 +60,10 @@ const Sidebar = ({ isOpen, onClose, activeSection, onSectionChange }) => {
       )}
       
       <aside className={`
-        fixed top-0 left-0 z-50 h-full bg-white border-r border-gray-200 shadow-lg transform transition-transform duration-300 ease-in-out
+        fixed inset-y-0 left-0 z-50 h-screen bg-white border-r border-gray-200 shadow-lg transform transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:static lg:z-auto
-        w-64 lg:w-64 lg:min-h-screen
+        w-64 lg:w-64 lg:h-screen
       `}>
         <div className="p-6 border-b border-gray-100">
           <div className="flex items-center space-x-3">

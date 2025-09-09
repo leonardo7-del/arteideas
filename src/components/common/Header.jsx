@@ -3,7 +3,7 @@ import { Search, Bell, User, Settings } from 'lucide-react';
 
 const Header = ({ onToggleSidebar, user }) => {
   return (
-    <header className="bg-white border-b border-gray-200 h-16 flex items-center justify-between px-6 shadow-sm">
+    <header className="bg-white border-b border-gray-200 h-16 flex items-center justify-between pr-6 pl-3 md:pl-4 lg:pl-0 shadow-sm">
       <div className="flex items-center space-x-4">
         <button
           onClick={onToggleSidebar}

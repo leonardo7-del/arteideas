@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Settings, Bell, Shield, Palette, Database, Download, Upload, Globe, Moon, Sun } from 'lucide-react';
+import { Settings, Bell, Shield, Palette, Database, Download, Upload, Globe, Sun } from 'lucide-react';
 import Card from '../../components/common/Card';
 import Button from '../../components/common/Button';
 
@@ -149,25 +149,10 @@ const Configuracion = () => {
               <div className="flex space-x-4">
                 <button
                   onClick={() => handleSettingChange('appearance', 'theme', 'light')}
-                  className={`flex items-center space-x-2 px-4 py-3 rounded-lg border-2 transition-colors ${
-                    settings.appearance.theme === 'light' 
-                      ? 'border-primary bg-primary/5' 
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
+                  className="flex items-center space-x-2 px-4 py-3 rounded-lg border-2 border-primary bg-primary/5 transition-colors"
                 >
                   <Sun className="w-5 h-5" />
                   <span>Claro</span>
-                </button>
-                <button
-                  onClick={() => handleSettingChange('appearance', 'theme', 'dark')}
-                  className={`flex items-center space-x-2 px-4 py-3 rounded-lg border-2 transition-colors ${
-                    settings.appearance.theme === 'dark' 
-                      ? 'border-primary bg-primary/5' 
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
-                >
-                  <Moon className="w-5 h-5" />
-                  <span>Oscuro</span>
                 </button>
               </div>
             </div>
